@@ -34,7 +34,7 @@ COPY . .
 RUN composer validate
 RUN composer clear-cache
 RUN composer install --ignore-platform-reqs --no-dev --optimize-autoloader
-RUN php artisan migrate
+# RUN php artisan migrate
 # Set permissions
 RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
 
